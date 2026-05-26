@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>NovaReel | Movie Reviews, Trailers & Ratings</title>
+  <meta name="description" content="NovaReel is a modern movie review platform with trending movies, latest reviews, cast details, and official trailers. Clean, fast, AdSense-ready layout." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="NovaReel | Movie Reviews, Trailers & Ratings" />
+  <meta property="og:description" content="Explore trending movies, read latest reviews, and watch official trailers. Rate your favorites." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="images/featured-poster.jpg" />
+
+  <!-- Schema-ready hooks -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "NovaReel",
+    "url": "https://example.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://example.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- AdSense placement (placeholder only). Keep layout clean; do not add policy-violating content. -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXX">
+  -->
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="NovaReel home">
+        <span class="brand-mark" aria-hidden="true">NR</span>
+        <span class="brand-name">NovaReel</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul class="nav-list" data-nav-list>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#reviews">Latest Reviews</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="movie-detail.html">Movie Details</a></li>
+          <li><a href="#categories">Categories</a></li>
+        </ul>
+      </nav>
+
+      <form class="search" role="search" action="search.html" method="get">
+        <label class="search-label" for="site-search">Search movies</label>
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="site-search" name="q" type="search" placeholder="Search titles, genres, cast..." autocomplete="off" />
+        </div>
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Mobile nav: CSS-only toggle uses :focus-within via wrapper -->
+  <script>
+    // Intentionally omitted (no JavaScript allowed). This file is CSS/HTML-only.
+  </script>
+
+  <main id="main" class="main" role="main">
+    <!-- Hero -->
+    <section class="hero" aria-label="Featured movie">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="pill">Featured</span>
+            <span class="pill pill-outline">Official Trailer</span>
+          </div>
+
+          <h1 class="hero-title">Eclipse of Tomorrow</h1>
+          <div class="hero-meta">
+            <div class="rating-badge" aria-label="Rating: 8.7 out of 10">
+              <span class="rating-score">8.7</span>
+              <span class="rating-star" aria-hidden="true">★</span>
+              <span class="rating-sub">IMDb-style</span>
+            </div>
+            <div class="hero-tags" aria-label="Genres">Sci‑Fi • Thriller • 2026</div>
+          </div>
+
+          <p class="hero-desc">A lone astronomer uncovers a time-bending signal that rewrites reality—before the city’s last clock strikes zero.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="movie-detail.html">Watch Trailer</a>
+            <a class="btn btn-ghost" href="#reviews">Read Reviews</a>
+          </div>
+
+          <div class="hero-ad" aria-label="Ad space (placeholder)">
+            <h2 class="visually-hidden">Advertisement</h2>
+            <div class="ad-slot">Ad space (responsive)</div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Featured trailer card">
+          <div class="movie-poster">
+            <img src="images/featured-poster.jpg" alt="Eclipse of Tomorrow poster" loading="eager" />
+            <div class="poster-overlay">
+              <span class="poster-chip">New</span>
+              <span class="poster-chip poster-chip-secondary">HD</span>
+            </div>
+          </div>
+
+          <div class="trailer-preview">
+            <div class="advice">
+              <span class="advice-icon" aria-hidden="true">▸</span>
+              <span>Official trailer embed (YouTube only)</span>
+            </div>
+            <div class="trailer-mini">
+              <iframe
+                title="Eclipse of Tomorrow – Official Trailer"
+                loading="lazy"
+                width="560"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/ysz5S6PUM-U"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="trending" aria-label="Trending movies">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Trending Movies</h2>
+          <p class="section-sub">Curated picks with strong reviews and audience buzz.</p>
+        </div>
+
+        <div class="grid grid-cards">
+          <!-- Movie Card -->
+          <article class="card movie-card" aria-label="Movie: Neon Harbor">
+            <a class="card-link" href="movie-detail.html" aria-label="Open Neon Harbor details">
+              <div class="card-media">
+                <img src="images/poster1.jpg" alt="Neon Harbor poster" loading="lazy" />
+                <div class="card-badge">Trending</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Neon Harbor</h3>
+                <div class="card-rating">
+                  <span class="rating-pill">8.4</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2025</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Action</strong></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card movie-card" aria-label="Movie: Glass Horizon">
+            <a class="card-link" href="movie-detail.html">
+              <div class="card-media">
+                <img src="images/poster2.jpg" alt="Glass Horizon poster" loading="lazy" />
+                <div class="card-badge card-badge-alt">Top Rated</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Glass Horizon</h3>
+                <div class="card-rating">
+                  <span class="rating-pill rating-pill-good">9.1</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2024</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Drama</strong></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card movie-card" aria-label="Movie: The Last Aurora">
+            <a class="card-link" href="movie-detail.html">
+              <div class="card-media">
+                <img src="images/poster3.jpg" alt="The Last Aurora poster" loading="lazy" />
+                <div class="card-badge card-badge-calm">Buzzy</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">The Last Aurora</h3>
+                <div class="card-rating">
+                  <span class="rating-pill">7.9</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2026</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Adventure</strong></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card movie-card" aria-label="Movie: Midnight Protocol">
+            <a class="card-link" href="movie-detail.html">
+              <div class="card-media">
+                <img src="images/poster4.jpg" alt="Midnight Protocol poster" loading="lazy" />
+                <div class="card-badge card-badge-alt">Editor’s Pick</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Midnight Protocol</h3>
+                <div class="card-rating">
+                  <span class="rating-pill rating-pill-good">8.8</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2025</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Sci‑Fi</strong></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card movie-card" aria-label="Movie: River of Smoke">
+            <a class="card-link" href="movie-detail.html">
+              <div class="card-media">
+                <img src="images/poster5.jpg" alt="River of Smoke poster" loading="lazy" />
+                <div class="card-badge card-badge-calm">Fan Favorite</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">River of Smoke</h3>
+                <div class="card-rating">
+                  <span class="rating-pill">8.0</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2023</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Crime</strong></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="card movie-card" aria-label="Movie: Starfall Avenue">
+            <a class="card-link" href="movie-detail.html">
+              <div class="card-media">
+                <img src="images/poster6.jpg" alt="Starfall Avenue poster" loading="lazy" />
+                <div class="card-badge card-badge-secondary">New Release</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-title">Starfall Avenue</h3>
+                <div class="card-rating">
+                  <span class="rating-pill rating-pill-good">8.6</span>
+                  <span class="muted">★</span>
+                  <span class="muted">2026</span>
+                </div>
+                <div class="card-meta">Genre: <strong>Romance</strong></div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-split" id="content" aria-label="Reviews and sidebar">
+      <div class="container split">
+        <div class="main-col">
+          <!-- Latest Reviews -->
+          <section class="section" id="reviews" aria-label="Latest reviews">
+            <div class="section-head">
+              <h2 class="section-title">Latest Reviews</h2>
+              <p class="section-sub">Short, helpful reviews with clear ratings and verdicts.</p>
+            </div>
+
+            <div class="grid grid-reviews">
+              <article class="review-card" aria-label="Review for Neon Harbor">
+                <header class="review-top">
+                  <h3 class="review-title">Neon Harbor Review</h3>
+                  <div class="review-rating" aria-label="Reviewer rating 8.3 out of 10">
+                    <span class="star">★</span>
+                    <span class="rating-value">8.3</span>
+                  </div>
+                </header>
+                <p class="review-by">by <strong>Aarav Mehta</strong></p>
+                <p class="review-text">A neon-soaked crime thriller that keeps momentum high—tight pacing, sharp dialogue, and a genuinely surprising final act.</p>
+              </article>
+
+              <article class="review-card" aria-label="Review for Glass Horizon">
+                <header class="review-top">
+                  <h3 class="review-title">Glass Horizon Review</h3>
+                  <div class="review-rating" aria-label="Reviewer rating 9.0 out of 10">
+                    <span class="star">★</span>
+                    <span class="rating-value">9.0</span>
+                  </div>
+                </header>
+                <p class="review-by">by <strong>Fatima Khan</strong></p>
+                <p class="review-text">Emotionally grounded and beautifully shot. The screenplay respects silence, and the performances land with rare subtlety.</p>
+              </article>
+
+              <article class="review-card" aria-label="Review for Midnight Protocol">
+                <header class="review-top">
+                  <h3 class="review-title">Midnight Protocol Review</h3>
+                  <div class="review-rating" aria-label="Reviewer rating 8.8 out of 10">
+                    <span class="star">★</span>
+                    <span class="rating-value">8.8</span>
+                  </div>
+                </header>
+                <p class="review-by">by <strong>Rohan Singh</strong></p>
+                <p class="review-text">A smart sci‑fi mystery with great sound design. It’s tense without being exhausting, and the world feels lived-in.</p>
+              </article>
+            </div>
+
+            <div class="reviews-ad" aria-label="Ad space (placeholder)">
+              <div class="ad-slot ad-slot-tall">Ad space (responsive)</div>
+            </div>
+          </section>
+
+          <!-- Upcoming Movies -->
+          <section class="section" id="upcoming" aria-label="Upcoming movies">
+            <div class="section-head">
+              <h2 class="section-title">Upcoming Movies</h2>
+              <p class="section-sub">Next releases you can bookmark for later.</p>
+            </div>
+
+            <div class="grid grid-cards grid-upcoming">
+              <article class="card movie-card" aria-label="Upcoming: Atlas of Silence">
+                <a class="card-link" href="movie-detail.html">
+                  <div class="card-media">
+                    <img src="images/up1.jpg" alt="Atlas of Silence poster" loading="lazy" />
+                    <div class="card-badge card-badge-secondary">Coming Soon</div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Atlas of Silence</h3>
+                    <div class="card-meta">Genre: <strong>Drama</strong></div>
+                    <div class="card-meta">Release: <strong>Aug 2026</strong></div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="card movie-card" aria-label="Upcoming: Velocity Saints">
+                <a class="card-link" href="movie-detail.html">
+                  <div class="card-media">
+                    <img src="images/up2.jpg" alt="Velocity Saints poster" loading="lazy" />
+                    <div class="card-badge card-badge-alt">Teaser Out</div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">Velocity Saints</h3>
+                    <div class="card-meta">Genre: <strong>Action</strong></div>
+                    <div class="card-meta">Release: <strong>Sep 2026</strong></div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="card movie-card" aria-label="Upcoming: The Quiet Dynamo">
+                <a class="card-link" href="movie-detail.html">
+                  <div class="card-media">
+                    <img src="images/up3.jpg" alt="The Quiet Dynamo poster" loading="lazy" />
+                    <div class="card-badge card-badge-calm">Premiere</div>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title">The Quiet Dynamo</h3>
+                    <div class="card-meta">Genre: <strong>Comedy</strong></div>
+                    <div class="card-meta">Release: <strong>Oct 2026</strong></div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Sidebar widgets">
+          <div class="widget">
+            <h2 class="widget-title">Popular Movies</h2>
+            <ul class="widget-list">
+              <li><a href="movie-detail.html">Neon Harbor <span class="muted">8.4</span></a></li>
+              <li><a href="movie-detail.html">Glass Horizon <span class="muted">9.1</span></a></li>
+              <li><a href="movie-detail.html">Midnight Protocol <span class="muted">8.8</span></a></li>
+              <li><a href="movie-detail.html">River of Smoke <span class="muted">8.0</span></a></li>
+            </ul>
+          </div>
+
+          <div class="widget" id="categories">
+            <h2 class="widget-title">Categories</h2>
+            <div class="tag-grid" role="list">
+              <a class="tag" href="category.html">Action</a>
+              <a class="tag" href="category.html">Drama</a>
+              <a class="tag" href="category.html">Sci‑Fi</a>
+              <a class="tag" href="category.html">Thriller</a>
+              <a class="tag" href="category.html">Comedy</a>
+              <a class="tag" href="category.html">Romance</a>
+              <a class="tag" href="category.html">Crime</a>
+              <a class="tag" href="category.html">Adventure</a>
+            </div>
+          </div>
+
+          <div class="widget">
+            <h2 class="widget-title">Latest Posts</h2>
+            <ul class="widget-list">
+              <li><a href="#reviews">5 Reasons Glass Horizon Hits Different</a></li>
+              <li><a href="#trending">Trending This Week: Neon Harbor & More</a></li>
+              <li><a href="#upcoming">Upcoming Releases for October 2026</a></li>
+            </ul>
+          </div>
+
+          <div class="widget" aria-label="Ad space (placeholder)">
+            <div class="ad-slot">Ad space (sidebar)</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="brand-mark" aria-hidden="true">NR</span>
+          <span class="brand-name">NovaReel</span>
+        </div>
+        <p class="footer-text">Movie reviews and official trailer embeds. No illegal streaming links, no downloads, and no copyright-violating content.</p>
+        <p class="copyright">© <span id="year">2026</span> NovaReel. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <h2 class="footer-title">Policies</h2>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="dmca.html">DMCA Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h2 class="footer-title">Site</h2>
+        <ul>
+          <li><a href="#trending">Trending</a></li>
+          <li><a href="#reviews">Latest Reviews</a></li>
+          <li><a href="#upcoming">Upcoming</a></li>
+          <li><a href="movie-detail.html">Movie Details</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h2 class="footer-title">Newsletter</h2>
+        <form class="newsletter" action="subscribe.html" method="post">
+          <label for="email" class="visually-hidden">Email</label>
+          <input id="email" name="email" type="email" placeholder="Email address" required />
+          <button class="btn btn-primary btn-full" type="submit">Subscribe</button>
+        </form>
+        <div class="footer-small">AdSense-friendly: content-first, clean typography, and readable spacing.</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
